@@ -6,9 +6,9 @@ void main()
 	int ele, product, i;
 	i = 1;
 	printf("Enter the number : ");
-	scanf("%d",&ele);
+	scanf("%d", &ele);
 
-	loop:
+loop:
 
 	// loop is a label to execute goto statement.
 
@@ -17,7 +17,6 @@ void main()
 	i += 1;
 
 	if (i <= 10)
-	
-	goto loop;
 
+		goto loop;
 }

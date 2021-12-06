@@ -5,12 +5,14 @@ void main()
 {
 	int N, i;
 	double sum;
-	i =1;
+	i = 1;
 	sum = 0;
 	printf("Enter the number : ");
-	scanf("%d",&N);
-	
-	while (i<=N)
+	scanf("%d", &N);
+
+	// This loop adds the square root of every number till N to the sum.
+
+	while (i <= N)
 	{
 		sum += sqrt(i);
 		i += 1;
