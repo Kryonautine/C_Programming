@@ -1,26 +1,10 @@
 #include <stdio.h>
-#include <math.h>
-
-// primeArray returns array of all primes
-
-int primeArray(int num)
-{
-	a
-}
-
-// numPrime calculates number of prime smaller than square root of given number.
-
-int numPrime(int num)
-{
-	int sqrtnum;
-	sqrtnum = int(sqrt(num));
-	a
-	return();
-}
 
 void main()
 {
-	int num1, num2, minum, numprime;
+
+	int num1, num2, divsor, divded, hcf, rem;
+
 	printf("Enter value of number 1 : ");
 	scanf("%d",&num1);
 	printf("Enter value of number 2 : ");
@@ -30,12 +14,29 @@ void main()
 
 	if (num1 > num2)
 	{
-		minum = num2;
+		divsor = num2;
+		divded = num1;
 	}
 	else
 	{
-		minum = num1;
+		divsor = num1;
+		divded = num2;
 	}
 
-	numprime = numPrime(minum);
+	// Using Euclid's division lemma to find coprime nature.
+
+	while (rem != 0)
+	{
+		rem = divded % divsor;
+		divded = divsor;
+		divsor = rem;
+	}
+
+	hcf = divded;
+	printf("The greatest common factor of %d and %d is %d.\n", num1, num2, hcf);
+
+	if (hcf != 1)
+		printf("%d and %d are not coprime.\n", num1, num2);
+	else
+		printf("%d and %d are coprime.\n", num1, num2);
 }
