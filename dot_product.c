@@ -1,26 +1,48 @@
 #include <stdio.h>
 
+// Do n-dimensional vectors.
+
 void main()
 {
 
-	int x1, x2, y1, y2, z1, z2, dotProduct;
+	int dimension, dotProduct = 0, i=0;
 
-	printf("Enter the x- component of 1st vector : ");
-	scanf("%d", &x1);
-	printf("Enter the y- component of 1st vector : ");
-	scanf("%d", &y1);
-	printf("Enter the z- component of 1st vector : ");
-	scanf("%d", &z1);
+	printf("Enter number of dimensions of vector : ");
+	scanf("%d", &dimension);
 
-	printf("Enter the x- component of 2nd vector : ");
-	scanf("%d", &x2);
-	printf("Enter the y- component of 2nd vector : ");
-	scanf("%d", &y2);
-	printf("Enter the z- component of 2nd vector : ");
-	scanf("%d", &z2);
+	int vec1[dimension], vec2[dimension];
 
-	dotProduct = x1*x2 + y1*y2 + z1*z2;
+	for (i=0;i<dimension;i++)
+	{
+		printf("Enter the value of component %d of 1st vector : ", i+1);
+		scanf("%d", &vec1[i]);
+	}
 
-	printf("The dot product of vectors (%d,%d,%d) and (%d,%d,%d) is : %d\n", x1, y1, z1, x2, y2, z2, dotProduct);
+	for (i=0;i<dimension;i++)
+	{
+		printf("Enter the value of component %d of 2nd vector : ", i+1);
+		scanf("%d", &vec2[i]);
+	}
+
+	for (i=0;i<dimension;i++)
+	{
+		dotProduct += vec1[i]*vec2[i];
+	}
+
+	printf("The dot product of vectors \n");
+
+	for (i=0;i<dimension;i++)
+	{
+		printf("%d ",vec1[i]);
+	}
+
+	printf("\nand \n");
+
+	for (i=0;i<dimension;i++)
+	{
+		printf("%d ",vec2[i]);
+	}
+
+	printf("\nis : %d\n", dotProduct);
 
 }
