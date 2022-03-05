@@ -48,8 +48,8 @@ int main(void) {
 	int key[128];
 	int a[4];
 	for(int i=0;i<4;i++) {
-		a[i] = rand();
-		//scanf("%d", &a[i]);
+		//a[i] = rand();
+		scanf("%d", &a[i]);
 	}
 	for (int i=0; i<4; i++) {
 		printbin(a[i]);
