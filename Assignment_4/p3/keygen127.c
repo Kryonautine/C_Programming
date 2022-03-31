@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(int argc, char **argv) {
-	srand(39288);
+	srand(393);
 	int key[127], var, rand01[2], form01[2], keymil[1000000];
 	double randm[2], form[2];
 	for (int i=0;i<127;i++) {

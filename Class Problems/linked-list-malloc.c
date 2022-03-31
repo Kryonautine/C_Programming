@@ -6,6 +6,10 @@ typedef struct ele{
 	struct ele *next;
 } ele ;
 
+void freeList(ele* head) {
+	ele *fr;
+}
+
 void printArr(ele* head) {
 	ele *arr;
 	arr=head;

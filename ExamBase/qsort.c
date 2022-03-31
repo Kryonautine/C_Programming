@@ -17,6 +17,7 @@ int main(void) {
 		scanf("%d", &A[i]);
 	}
 
+	// qsort(stdlib.h) sorts integers.
 	qsort(A, n, sizeof(int), cmpfunc);
 
 	for (int i=0;i<n;i++) {
